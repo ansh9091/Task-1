@@ -1,0 +1,81 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+.navbar.scrolled {
+  background-color: #222;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: white;
+  color: #222;
+  border-radius: 5px;
+}
+
+/* Section Styles */
+.section {
+  height: 100vh;
+  padding: 100px 40px 40px;
+  color: white;
+  font-size: 2rem;
+}
+
+#home {background-image: url(hhhh.avif); }
+#services { background-image: url(service.webp); }
+#about { background-image: url(abut.png);  }
+  #contact { background-image: url(contact.avif);}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background-color: #222;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+  .navbar.active .nav-links {
+    display: flex;
+  }
+}
